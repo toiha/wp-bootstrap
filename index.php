@@ -11,11 +11,17 @@
             <div class="container">
                 <?php if (is_home()): ?>
                     <h1 id="site-title" class="col-md-9">
-                        <span><?php bloginfo('name'); ?></span>
+                        <span>
+                            <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                            <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                        </span>
                     </h1>
                 <?php else: ?>
                     <div id="site-title" class="col-md-9">
-                        <a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+                        <a href="<?php echo home_url(); ?>/">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                            <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                        </a>
                     </div>
                 <?php endif; ?>
                 <div class="col-md-3">
