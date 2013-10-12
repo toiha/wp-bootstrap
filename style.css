@@ -1,0 +1,139 @@
+/*
+Theme Name: WP-Bootstrap
+Theme URI: https://github.com/developathe/wp-bootstrap
+Description: Wordpress theme using Bootstrap 3 by alK13 (Member of The Developathe Project.)
+Version: 1.0
+Author: alK13
+Author URI: https://github.com/alK13
+Tags: blue, white, black, full-width, simple, bootstrap
+
+    alK13
+
+https://github.com/developathe/wp-bootstrap
+*/
+
+@import url('css/bootstrap.min.css');
+@import url('css/bootstrap-theme.min.css');
+
+html,
+html {
+    overflow-y: scroll;
+}
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: Ubuntu,Arial,sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Ubuntu, Arial, sans-serif;
+}
+
+blockquote p {
+    font-size: 16px;
+}
+/* Header */
+#header-page {
+    height: 100px;
+    line-height: 100px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+}
+
+#header-page .container {
+    padding: 0;
+}
+
+#header-page h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 100px;
+}
+
+#header-page .col-md-9,
+#header-page .col-md-3 {
+    padding: 0;
+}
+
+#header-page input#s {
+    margin: 33px 0 0 0;
+}
+
+#site-title {
+    font-size: 1.6em;
+}
+
+/* Navbar */
+#navbar {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+}
+
+#navbar .container {
+    padding: 0;
+}
+
+/* Footer */
+#footer {
+    background: #dadada;
+    line-height: 49px;
+}
+
+/* Wrap */
+#wrap {
+    padding: 0 0 50px 0;
+}
+
+/* Main (content)*/
+#main {
+    padding: 15px 0;
+}
+
+/* Post */
+.post {
+    margin-bottom: 35px;
+}
+
+.post header h1,
+.post header h2 {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #dadada;
+}
+
+.post-info {
+    font-size: 0.9em;
+    margin: 0 0 10px;
+    color: #666;
+}
+
+.comment-info {
+    line-height: 20px;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #dadada;
+}
+
+.comment-info img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+
+/* Sidebar */
+#sidebar {
+    padding: 15px 0 15px 15px;
+}
+
+#sidebar h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
