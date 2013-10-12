@@ -87,6 +87,10 @@ blockquote p {
     line-height: 49px;
 }
 
+#footer .container {
+    padding: 0;
+}
+
 /* Wrap */
 #wrap {
     padding: 0 0 50px 0;
