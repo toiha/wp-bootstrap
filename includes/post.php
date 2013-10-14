@@ -16,8 +16,8 @@
     <section class="content">
         <?php the_content(); ?>
     </section>
-
-    <?php if (is_single()): ?>
-    <?php comments_template(); ?>
-    <?php endif; ?>
 </article>
+
+<?php if (is_single()): ?>
+    <?php comments_template('/includes/comments.php'); ?>
+<?php endif; ?>
