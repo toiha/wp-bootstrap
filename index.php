@@ -4,6 +4,8 @@
         <meta charset="<?php bloginfo('charset'); ?>">
         <title><?php the_title(); ?></title>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
+        <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
         <?php wp_head(); ?>
     </head>
     <body>
@@ -40,6 +42,31 @@
                         <li<?php if (is_home()): ?> class="active"<?php endif; ?>>
                             <a href="<?php echo home_url(); ?>">Accueil</a>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                $categoryItems = get_categories();
+                                foreach ($categoryItems as $categoryItem):
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo get_category_link($categoryItem->cat_ID); ?>"><?php echo $categoryItem->name; ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </li>
+                        <?php
+                        $pageItems = get_pages(array(
+                            'sort_order'  => 'ASC',
+                            'sort_column' => 'menu_order',
+                            'post_status' => 'publish',
+                        ));
+                        foreach ($pageItems as $pageItem):
+                            ?>
+                            <li>
+                                <a href="<?php echo $pageItem->guid; ?>"><?php echo $pageItem->post_title; ?></a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </nav>
             </div>
