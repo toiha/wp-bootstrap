@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: Ubuntu, Arial, sans-serif;
 }
 
+.content.center {
+    text-align: center;
+}
+
 blockquote p {
     font-size: 16px;
 }
@@ -54,6 +58,10 @@ blockquote p {
     margin: 0;
     padding: 0;
     line-height: 100px;
+}
+
+#header-page h1 a:hover {
+    text-decoration: none;
 }
 
 #header-page .col-md-9,
@@ -99,6 +107,13 @@ blockquote p {
 /* Main (content)*/
 #main {
     padding: 15px 0;
+}
+
+#page-title {
+    margin: 0 0 25px 0;
+    padding: 0 0 25px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
 }
 
 /* Post */

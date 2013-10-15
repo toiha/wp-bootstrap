@@ -25,3 +25,21 @@ function wp_bootstrap_comment($comment, $args, $depth)
     </li>
     <?php
 }
+
+function wp_bootstrap_title() {
+    if (is_category()) {
+        single_cat_title( '');
+    }
+    elseif (is_search()) {
+        echo 'Recherche : ' . get_search_query();
+    }
+    elseif (is_home()) {
+        bloginfo('name');
+    }
+    elseif(is_404()) {
+        echo 'Erreur 404';
+    }
+    elseif(is_single()) {
+        echo the_title();
+    }
+}
