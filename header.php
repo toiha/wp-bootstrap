@@ -9,24 +9,7 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <header id="header-page">
-            <div class="container">
-                <h1 id="site-title" class="col-md-9">
-                    <a href="<?php echo home_url(); ?>/">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-                        <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-                    </a>
-                </h1>
-                <div class="col-md-3">
-                    <form method="get" id="form" action="<?php bloginfo('url'); ?>/">
-                        <div class="form-group">
-                            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Recherche" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </header>
-        <div id="navbar" class="navbar navbar-inverse">
+        <div id="navbar" class="navbar navbar-default">
             <div class="container">
                 <nav class="navbar-left" role="navigation">
                     <ul class="nav navbar-nav"> 
@@ -62,5 +45,23 @@
                 </nav>
             </div>
         </div>
+        <header id="header-page">
+            <div class="container">
+                <h1 id="site-title" class="col-md-9">
+                    <a href="<?php echo home_url(); ?>/">
+                        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                        <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                    </a>
+                </h1>
+                <div class="col-md-3">
+                    <form method="get" id="form" action="<?php bloginfo('url'); ?>/">
+                        <div class="form-group">
+                            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Recherche" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+
         <div id="wrap" class="container">
             <section id="main" class="col-md-12" role="main">
