@@ -157,3 +157,16 @@ blockquote p {
     margin: 0;
     font-size: 1em;
 }
+
+pre {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: none;
+    border-radius: 0;
+}
