@@ -170,3 +170,14 @@ pre {
     border: none;
     border-radius: 0;
 }
+
+.aligncenter {
+    text-align: center;
+}
+
+.alignleft {
+    text-align: right;
+}
+.alignright {
+    text-align: left;
+}
