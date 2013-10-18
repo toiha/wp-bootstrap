@@ -20,7 +20,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <?php
-                                $categoryItems = get_categories();
+                                $categoryItems = get_categories(array('parent' => NULL));
                                 foreach ($categoryItems as $categoryItem):
                                     ?>
                                     <li>
