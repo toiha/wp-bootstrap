@@ -48,6 +48,9 @@ blockquote p {
     border-left: none;
     border-right: none;
     background: #2aabe2;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    background-clip: padding-box;
 }
 
 #header-page .container {
@@ -69,24 +72,30 @@ blockquote p {
     padding: 0;
 }
 
-#header-page input#s {
-    margin: 33px 0 0 0;
-}
+
 
 #site-title {
     font-size: 1.6em;
 }
 
 /* Navbar */
+
 #navbar {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    margin: 0;
+    text-align: right;
 }
 
-#navbar .container {
-    padding: 0;
+#navbar li.level-1 {
+    display: inline;
+    text-align: left;
+    margin: 0 0 0 15px;
+}
+#navbar li.level-1 a {
+    color: #222;
+}
+
+#navbar-search-item .dropdown-menu {
+    padding: 5px;
+    width: 240px;
 }
 
 /* Footer */
@@ -124,14 +133,14 @@ blockquote p {
 .post header h1,
 .post header h2 {
     margin: 0 0 10px 0;
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid #dadada;
+    padding: 0;
 }
 
 .post-info {
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin: 0 0 10px;
-    color: #666;
+    color: #888;
+    font-style: italic;
 }
 
 .comment-info {
