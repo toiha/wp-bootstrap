@@ -6,17 +6,25 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
         <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/wp-bootstrap.js"></script>
         <?php wp_head(); ?>
     </head>
     <body>
-        <div id="navbar" class="navbar navbar-default">
+        <header id="header-page">
             <div class="container">
-                <nav class="navbar-left" role="navigation">
-                    <ul class="nav navbar-nav"> 
-                        <li<?php if (is_home()): ?> class="active"<?php endif; ?>>
+                <h1 id="site-title" class="col-md-5">
+                    <a href="<?php echo home_url(); ?>/">
+                        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                        <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                    </a>
+                </h1>
+
+                <nav id="navbar" role="navigation" class="col-md-7">
+                    <ul> 
+                        <li class="level-1">
                             <a href="<?php echo home_url(); ?>">Accueil</a>
                         </li>
-                        <li class="dropdown">
+                        <li class="dropdown level-1">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <?php
@@ -37,29 +45,20 @@
                         ));
                         foreach ($pageItems as $pageItem):
                             ?>
-                            <li>
+                            <li class="level-1">
                                 <a href="<?php echo $pageItem->guid; ?>"><?php echo $pageItem->post_title; ?></a>
                             </li>
                         <?php endforeach; ?>
+                        <li id="navbar-search-item" class="dropdown level-1">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="search-icon" class="glyphicon glyphicon-search"></span><b class="caret"></b></a>
+                            <div class="dropdown-menu pull-right">
+                                <form method="get" id="form" action="<?php bloginfo('url'); ?>/">
+                                    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Recherche" />
+                                </form>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
-            </div>
-        </div>
-        <header id="header-page">
-            <div class="container">
-                <h1 id="site-title" class="col-md-9">
-                    <a href="<?php echo home_url(); ?>/">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-                        <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-                    </a>
-                </h1>
-                <div class="col-md-3">
-                    <form method="get" id="form" action="<?php bloginfo('url'); ?>/">
-                        <div class="form-group">
-                            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Recherche" />
-                        </div>
-                    </form>
-                </div>
             </div>
         </header>
 
