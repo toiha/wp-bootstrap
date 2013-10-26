@@ -14,8 +14,7 @@
             <div class="container">
                 <h1 id="site-title" class="col-md-5">
                     <a href="<?php echo home_url(); ?>/">
-                        <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
-                        <img src="<?php echo get_template_directory_uri() ?>/images/title.png" alt="<?php bloginfo('name'); ?>" title="<?php bloginfo('name'); ?>" />
+                        <?php bloginfo('name'); ?>
                     </a>
                 </h1>
 
@@ -60,6 +59,11 @@
                     </ul>
                 </nav>
             </div>
+            <?php if (get_bloginfo('description')): ?>
+                <div id="slogan">
+                    <div class="container"><?php bloginfo('description'); ?></div>
+                </div>
+            <?php endif; ?>
         </header>
 
         <div id="wrap" class="container">
