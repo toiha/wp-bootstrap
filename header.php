@@ -40,10 +40,7 @@
                         $pageItems = get_pages(array(
                             'sort_order'  => 'ASC',
                             'sort_column' => 'menu_order',
-                            'post_status' => (in_array(array(
-                                'administrator',
-                                'editor',
-                            ), wp_get_current_user()->roles) ? 'publish,private' : 'publish'),
+                            'post_status' => (in_array('administrator', wp_get_current_user()->roles) ? 'publish,private' : 'publish'),
                         ));
                         foreach ($pageItems as $pageItem):
                             ?>
