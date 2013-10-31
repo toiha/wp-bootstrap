@@ -212,3 +212,16 @@ pre {
 .nav-next {
     float: right;
 }
+
+article h3 {
+    color: #9966CC;
+}
+article h4 {
+    color: #008000;
+}
+article h5 {
+    color: #964B00;
+}
+article h6 {
+    color: #8B0000;
+}
