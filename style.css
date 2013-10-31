@@ -203,7 +203,7 @@ pre {
 .fancybox img {
     padding: 10px;
     margin: 10px;
-    1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 .nav-previous,
