@@ -40,7 +40,7 @@
                         $pageItems = get_pages(array(
                             'sort_order'  => 'ASC',
                             'sort_column' => 'menu_order',
-                            'post_status' => 'publish',
+                            'post_status' => 'publish,private',
                         ));
                         foreach ($pageItems as $pageItem):
                             ?>
