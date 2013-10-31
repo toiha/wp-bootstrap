@@ -200,6 +200,12 @@ pre {
     text-align: left;
 }
 
+.fancybox img {
+    padding: 10px;
+    margin: 10px;
+    1px solid #ddd;
+}
+
 .nav-previous,
 .nav-next {
     font-size: 30px;
