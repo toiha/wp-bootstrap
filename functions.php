@@ -39,7 +39,7 @@ function wp_bootstrap_title() {
     elseif(is_404()) {
         echo 'Erreur 404';
     }
-    elseif(is_single()) {
+    elseif(is_single() || is_page()) {
         echo the_title();
     }
 }
