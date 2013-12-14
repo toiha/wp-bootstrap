@@ -20,6 +20,10 @@ html {
     overflow-y: scroll;
 }
 
+html, body {
+    background: #fafafa;
+}
+
 #navigation {
     border-radius: 0;
     margin-bottom: 0;
@@ -29,11 +33,12 @@ html {
     padding-right: 0;
 }
 
-/*#form-width {
-    max-width: 250px;
-}*/
 body {
     min-height: 100%;
+}
+
+#page-header {
+    border-bottom: 1px solid #ccc;
 }
 
 .content.center {
@@ -167,7 +172,7 @@ article h6 {
 }
 
 .panel-developathe {
-    background: #fafafa;
+    background: #fff;
     border-radius: 1px;
     box-shadow: 0 0 3px #ccc;
     border: 1px solid #eee;
