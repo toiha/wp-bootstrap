@@ -52,11 +52,11 @@ blockquote p {
 
 /* Footer */
 #footer {
-    line-height: 49px;
     text-align: center;
     font-style: italic;
     font-size: 0.9em;
     color: #888;
+    padding: 20px 0;
 }
 
 #footer .container {
