@@ -2,7 +2,7 @@
 <html>
     <head <?php language_attributes(); ?>>
         <meta charset="<?php bloginfo('charset'); ?>">
-        <title><?php wp_bootstrap_title(); ?> | <?php bloginfo( 'name' ); ?></title>
+        <title><?php wp_bootstrap_title(); ?> | <?php bloginfo('name'); ?></title>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
         <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
@@ -10,21 +10,33 @@
         <?php wp_head(); ?>
     </head>
     <body>
-        <header id="header-page">
+        <nav id="navigation" class="navbar navbar-top navbar-inverse" role="navigation">
             <div class="container">
-                <h1 id="site-title" class="col-md-5">
-                    <a href="<?php echo home_url(); ?>/">
-                        <?php bloginfo('name'); ?>
-                    </a>
-                </h1>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+                </div>
 
-                <nav id="navbar" role="navigation" class="col-md-7">
-                    <ul> 
-                        <li class="level-1">
+                <div role="navigation" class="collapse navbar-collapse">
+                    <form method="get" id="form" action="<?php bloginfo('url'); ?>/" class="navbar-form navbar-right" role="form">
+                        <div class="form-group">
+                            <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Recherche" />
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </form>
+                    <ul  class="nav navbar-nav navbar-right"> 
+                        <li>
                             <a href="<?php echo home_url(); ?>">Accueil</a>
                         </li>
-                        <li class="dropdown level-1">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories <b class="caret"></b></a>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Catégories <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <?php
                                 $categoryItems = get_categories(array('parent' => NULL));
@@ -44,27 +56,30 @@
                         ));
                         foreach ($pageItems as $pageItem):
                             ?>
-                            <li class="level-1">
+                            <li>
                                 <a href="<?php echo $pageItem->guid; ?>"><?php echo $pageItem->post_title; ?></a>
                             </li>
                         <?php endforeach; ?>
-                        <li id="navbar-search-item" class="dropdown level-1">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="search-icon" class="glyphicon glyphicon-search"></span><b class="caret"></b></a>
-                            <div class="dropdown-menu pull-right">
-                                <form method="get" id="form" action="<?php bloginfo('url'); ?>/">
-                                    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" class="form-control" placeholder="Recherche" />
-                                </form>
-                            </div>
+                        <li>
                         </li>
                     </ul>
-                </nav>
-            </div>
-            <?php if (get_bloginfo('description')): ?>
-                <div id="slogan">
-                    <div class="container"><?php bloginfo('description'); ?></div>
                 </div>
-            <?php endif; ?>
-        </header>
+            </div>
+        </nav>
+
+        <?php
+        global $wp_page_title, $wp_page_description;
+        ?>
+        <?php if (!empty($wp_page_title)): ?>
+            <header id="page-header" class="jumbotron">
+                <div class="container">
+                    <h1><?php echo $wp_page_title; ?></h1>
+                    <?php if (!empty($wp_page_description)): ?>
+                        <p class="lead"><?php echo $wp_page_description; ?></p>
+                    <?php endif; ?>
+                </div>
+            </header>
+        <?php endif; ?>
 
         <div id="wrap" class="container">
             <section id="main" class="col-md-12" role="main">

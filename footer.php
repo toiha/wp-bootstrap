@@ -1,10 +1,11 @@
             </section>
         </div>
-        <footer id="footer" class="navbar navbar-fixed-bottom">
+        <footer id="footer">
             <div class="container">
                 <p>Propulsé par <a href="http://wordpress.org">WordPress</a>
-                    - The <em>Dévelopathe</em> Project  
-                    - <a href="http://al.k13.fr">_alK13</p>
+                    - <a href="http://getbootstrap.com/">Bootstrap 3</a>  
+                    - <a href="https://github.com/developathe/wp-bootstrap">GitHub</a>  
+                    - Author : <a href="http://al.k13.fr">_alK13</p>
             </div>
         </footer>
         <?php wp_footer(); ?>

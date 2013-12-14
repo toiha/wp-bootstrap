@@ -37,10 +37,10 @@ if (post_password_required()) {
 
     <?php if ('open' == $post->comment_status) : ?>
 
-        <div id="respond" class="panel panel-default">
-            <div class="panel-heading">
+        <div id="respond" class="panel panel-developathe">
+            <header class="panel-heading">
                 <h3 class="panel-title">Répondre</h3>
-            </div>
+            </header>
             <div class="panel-body">
                 <div class="cancel-comment-reply">
                     <?php cancel_comment_reply_link(); ?>
@@ -61,28 +61,40 @@ if (post_password_required()) {
 
                         <div class="form-group">
                             <label for="author">Nom</label>
-                            <input id="author" name="author" type="text" value="<?php echo $comment_author; ?>" class="form-control" />
+                            <div class="input-group">
+                                <input id="author" name="author" type="text" value="<?php echo $comment_author; ?>" class="form-control" />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email (ne sera pas publié) </label>
-                            <input id="email" name="email" type="text" value="<?php echo $comment_author_email; ?>" class="form-control" />
+
+                            <div class="input-group">
+                                <input id="email" name="email" type="text" value="<?php echo $comment_author_email; ?>" class="form-control" />
+                                <span class="input-group-addon">@</span>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="url">Site Web</label>
-                            <input name="url" id="url" value="" size="22" class="form-control" />
+                            <label for="url">Site Web</label><div class="input-group">
+                                <input name="url" id="url" value="" size="22" class="form-control" />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+                            </div>
                         </div>
 
                     <?php endif; ?>
 
                     <div class="form-group">
                         <label for="url">Commentaire</label>
-                        <textarea name="comment" id="comment" rows="10" class="form-control"></textarea>
+                        <div class="input-group">
+                            <textarea name="comment" id="comment" rows="10" class="form-control"></textarea>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-comment"></span></span>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <input name="submit" type="submit" id="submit" value="Soummettre le commentaire" class="btn btn-default" />
+                        <input name="submit" type="submit" id="submit" value="Soummettre le commentaire" class="btn btn-primary" />
                         <?php comment_id_fields(); ?>
                     </div>
 

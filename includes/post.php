@@ -1,21 +1,22 @@
-<article id="post-<?php the_ID(); ?>" class="post">
-    <header>
-        <hgroup>
-            <?php if (is_single()): ?>
-                <h1><?php the_title(); ?></h1>
-            <?php else: ?>
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php endif; ?>
-        </hgroup>
-    </header>
+<article id="post-<?php the_ID(); ?>" class="post panel panel-developathe">
+    <?php if (!is_single()): ?>
+        <header class="panel-heading">
+            <hgroup>
+                <h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
+            </hgroup>
+        </header>
+    <?php endif; ?>
+    <section class="content panel-body">
+        <?php the_content(); ?>
+    </section>
+
     <?php if (!is_page()): ?>
-        <aside class="post-info">
+        <aside class="panel-footer">
+            <span class="glyphicon glyphicon-info-sign"></span>
             Posté le <?php the_date(); ?> dans <?php the_category(', '); ?> par <?php the_author(); ?>.
         </aside>
     <?php endif; ?>
-    <section class="content">
-        <?php the_content(); ?>
-    </section>
 </article>
 
 <?php if (is_single()): ?>
