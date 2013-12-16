@@ -1,0 +1,189 @@
+/*
+Theme Name: WP-Bootstrap
+Theme URI: https://github.com/developathe/wp-bootstrap
+Description: Wordpress theme using Bootstrap 3 by alK13 (Member of The Developathe Project.)
+Version: 1.0
+Author: alK13
+Author URI: https://github.com/alK13
+Tags: blue, white, black, full-width, simple, bootstrap
+
+    alK13
+
+https://github.com/developathe/wp-bootstrap
+*/
+
+@import url('css/bootstrap.min.css');
+/*@import url('css/bootstrap-theme.min.css');*/
+
+html,
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    background: #fafafa;
+}
+
+#navigation {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+#navigation .navbar-collapse,
+#navigation .navbar-form {
+    padding-right: 0;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+}
+
+#page-header {
+    border-bottom: 1px solid #ccc;
+}
+
+.content.center {
+    text-align: center;
+}
+
+blockquote p {
+    font-size: 16px;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #888;
+    padding: 20px 0;
+}
+
+#footer .container {
+    padding: 0;
+}
+
+/* Wrap */
+#wrap {
+    padding: 0 0 50px 0;
+}
+
+/* Main (content)*/
+#main {
+    padding: 15px 0;
+}
+
+#page-title {
+    margin: 0 0 25px 0;
+    padding: 0 0 25px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+/* Post */
+.post {
+    margin-bottom: 35px;
+}
+
+.post header h1,
+.post header h2 {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.comment-info {
+    line-height: 20px;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #dadada;
+}
+
+.comment-info img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+
+/* Sidebar */
+#sidebar {
+    padding: 15px 0 15px 15px;
+}
+
+#sidebar h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+pre {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    border: none;
+    border-radius: 0;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.alignleft {
+    text-align: right;
+}
+.alignright {
+    text-align: left;
+}
+
+.fancybox img {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+}
+
+.nav-previous,
+.nav-next {
+    font-size: 30px;
+    color: #111111;
+}
+
+.nav-previous {
+    float: left;
+}
+
+.nav-next {
+    float: right;
+}
+
+article h3 {
+    color: #9966CC;
+}
+article h4 {
+    color: #008000;
+}
+article h5 {
+    color: #964B00;
+}
+article h6 {
+    color: #8B0000;
+}
+
+.panel-developathe {
+    background: #fff;
+    border-radius: 1px;
+    border: 1px solid #eee;
+}
+
+.panel-developathe .panel-title {
+    font-size: 30px;
+}
+
+.form-control,
+.input-group-addon,
+.btn {
+    border-radius: 1px;
+}
