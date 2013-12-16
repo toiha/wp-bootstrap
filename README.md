@@ -1,4 +1,5 @@
-Wordpress Bootstrap by alK13 (member of The Dévelopathe Project)
+Wordpress Bootstrap by \_alK13 (member of The Dévelopathe Project)
 ===========
 
-Wordpress Bootrsrap is a theme using Twitter Bootstrap 3.
+Wordpress Bootrstrap is a theme based on Twitter Bootstrap 3.
+The website http://developathe.com uses this theme.
