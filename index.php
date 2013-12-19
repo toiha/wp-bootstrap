@@ -14,8 +14,8 @@ elseif(is_single()) {
         <?php get_template_part('includes/post'); ?>
     <?php endwhile; ?>
     <div>
-        <?php next_posts_link(__('<div class="nav-previous"><span class="glyphicon glyphicon-arrow-left"></span></div>')); ?>
-        <?php previous_posts_link(__('<div class="nav-next"><span class="glyphicon glyphicon-arrow-right"></span></div>')); ?>
+        <?php previous_posts_link(__('<button type="button" title="Page précédente" class="btn btn-default btn-lg nav-previous"><span class="glyphicon glyphicon-arrow-left"></button></div>')); ?>
+        <?php next_posts_link(__('<button type="button" title="Page suivante" class="btn btn-default btn-lg nav-next"><span class="glyphicon glyphicon-arrow-right"></span></button>')); ?>
     </div>
 <?php else : ?>
 <?php endif; ?>
